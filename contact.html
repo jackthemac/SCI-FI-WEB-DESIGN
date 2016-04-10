@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>Contact</title>
+<!-- [if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$(window).load(function() { //start after HTML, images have loaded
+ 
+    var InfiniteRotator =
+    {
+        init: function()
+        {
+            //initial fade-in time (in milliseconds)
+            var initialFadeIn = 0;
+ 
+            //interval between items (in milliseconds)
+            var itemInterval = 1000;
+ 
+            //cross-fade time (in milliseconds)
+            var fadeTime = 0;
+ 
+            //count number of items
+            var numberOfItems = $('.rotating-item').length;
+ 
+            //set current item
+            var currentItem = 0;
+ 
+            //show first item
+            $('.rotating-item').eq(currentItem).fadeIn(initialFadeIn);
+ 
+            //loop through the items
+            var infiniteLoop = setInterval(function(){
+                $('.rotating-item').eq(currentItem).fadeOut(fadeTime);
+ 
+                if(currentItem == numberOfItems -1){
+                    currentItem = 0;
+                }else{
+                    currentItem++;
+                }
+                $('.rotating-item').eq(currentItem).fadeIn(fadeTime);
+ 
+            }, itemInterval);
+        }
+    };
+ 
+    InfiniteRotator.init();
+ 
+});
+});
+</script>
+<script>
+$(document).ready(function(){
+$("img").click(function(){
+$("#touch").show();
+});
+});
+</script>
+<style>
+body { font-family: "arial black"; background-color: #CCFF99; margin: 0px; padding: 0px;}
+#front { font: "arial black"; 4em; #000000; padding-left: 30px; border-bottom: 3px solid black; background-color: #6699FF; margin-bottom: 0px;  
+padding-top: 0; margin-top: 0px; }
+#middle { float: right; padding: 1px 20px 1px 10px; width: 70%; margin: 0px; border: none; background-color: #CCCCFF; }
+#side { float: left; width: 10%; margin-top: 0px; font: Impact, Charcoal, sans-serif; 2em; bold; #000000; padding: 10px; border: none; 
+            background-color: #CCFF99; }
+#side a:hover { color: #FFFF66; }
+#back { background-color: #FFFF66; width: 100%; clear: both; height: 20%; margin: 0px; position: absolute; 
+        bottom: 0; left: 0; }
+#touch { display: none; }
+#rotating-item-wrapper {
+    position: relative;
+    width: 980px;
+    height: 347px;
+}
+.rotating-item {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#ball { position: absolute;
+  top: 200px;
+   left: 820px;;
+    width: 300px;
+     height: 300px;
+}
+#pay { position: absolute;
+  top: 500px;
+   left:400px;
+}
+#command { position: absolute;
+  top: 450px;
+   left: 850px;
+}
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+#back { display: none; }
+#ball { position: absolute;
+         top: 200px;
+          left:10px;
+           width: 50px;
+            height: 50px;
+             z-index: 1; }
+#side { position: absolute;
+        top: 150px;
+         left: 100px;
+          background-color: #6699FF; }
+#touch { position: absolute;
+         top: 200px;
+          left:10px;
+           width: 50px;
+            height: 50px;
+             z-index: 3; }
+#command { position: absolute;
+          top: 225px;
+           left: 10px;
+            z-index: 2; }
+</style>
+</head>
+<body>
+<header id="front">
+CONTACT
+</header>
+<main id="middle" style="height: 565px">
+<ul>
+  <li>nov0360@hotmail.com</li>
+  <li>telephone: 267-241-3836</li>
+  <li><pre>snail mail: Scifi Web Design
+                       4721 BALTIMORE AVE
+                       PHILADELPHIA, PA 19143</pre></li>
+</ul>
+<form Action="contact_me.php" method="post" id="touch">
+<p>name:<input type="text" name="name" value="Your name"></p>
+<p>email address:<input type="text" name="email" value="Your email"></p>
+<p>express yourself!:<textarea rows="4" cols="50" name="message">
+</textarea></p>
+<p><input type="submit" name="submit" value="send"></p>
+</form>
+<div id="pay">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+
+<input type="hidden" name="cmd" value="_s-xclick">
+
+<input type="hidden" name="hosted_button_id" value="75D379PGSW6SL">
+
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+
+</form>
+
+</div>
+<div id="ball" style="width: 300px; height: 300px;">
+<div id="rotating-item-wrapper">
+<img src="lightningball.png" class="rotating-item" style="width: 300px; height: 300px;"> 
+<img src="lightningball1.png" class="rotating-item" style="width: 300px; height: 300px;"> 
+<img src="lightningball2.png" class="rotating-item" style="width: 300px; height: 300px;"> 
+<img src="lightningball3.png" class="rotating-item" style="width: 300px; height: 300px;">
+</div>
+</div>
+<p id="command">CLICK TO CONTACT</p>
+</main>
+<ul id="side">
+  <li><a href="index.html">Main</a></li>
+  <li><a href="about.html">About</a></li>
+</ul>
+<div id="back">
+</div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>Contact</title>
+<!-- [if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="move.js"></script>
+<script src="loop1.js"></script>
+<script src="loop2.js"></script>
+<style>
+#ufo > #saucer { width:25px; height:50px; top:0px; left: 400px; position:absolute; z-index: 8; 
+}
+#neon1 { position: absolute; 
+ background-color: #000000;
+  top: 100px;
+   left: 300px;
+    z-index: 10;
+    width: 400px;
+     height: 400px;
+      margin: 0px;
+       padding: 0% 0% 0% 0%;
+        text-align: center;
+}
+p { font-size: 3em; left: 200px;
+}
+#links { z-index: 9;
+          width: 400px;
+           height: 200px;
+            background-color: #CCFF99; 
+}
+a:hover { color: red;
+}
+#neon2 { position: absolute;
+  left: 600px;
+   top: 400px;
+    width: 600px;
+     height: 300px;
+      z-index: 7;
+       background-color: #4D4D4D;
+}
+#ufo { z-index: 8;
+}
+#rotating-item-wrapper {
+    position: relative;
+    width: 980px;
+    height: 347px;
+}
+.rotating-item {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#rotating-item-wrapper2 {
+    position: relative;
+    width: 600px;
+    height: 300px;
+}
+.rotating-item2 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+body { background-image: url("scifisketch.png"); 
+  background-repeat: no-repeat;
+   background-size: 1500px 1000px;
+}
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+#links { z-index: 10;
+          top: 0;
+           left: 0;
+            width: 100px;
+             height: 200px;
+              background-color: #66FF33; }
+p { font-size: 1em; top: 200px; left: 0px; } 
+#neon2 { display: none; }
+#neon1 { position: absolute; 
+ background-color: #000000;
+  top: 200px;
+   left: 0px;
+    z-index: 9;
+    width: 300px;
+     height: 150px;
+      margin: 0px;
+       padding: 0% 0% 0% 0%;
+        text-align: center;
+}
+body { overflow: hidden;
+ background-image: url("scifisketch.png"); 
+  background-repeat: no-repeat;
+   background-size: 400px 600px; }
+}
+</style>
+</head>
+<body>
+<div id="ufo"> <img src="flyingsaucer.png"; id="saucer";></div>
+<div id="neon1">
+<div id="rotating-item-wrapper">
+
+<p class="rotating-item" style="color:#FF0066;font-family:'Trebuchet MS';left:20px;">Surfing the web<br>
+                                                                           from a <br>computer<br> 
+                                                                           in University City<br>Philadelphia</p>
+<p class="rotating-item" style="color:#FF00FF;font-family:'lucida Grande';left:50px;">I am examining<br> 
+                                                                         the websites<br> 
+                                                                         of the world</p>
+<p class="rotating-item" style="color:#FFFF00;font-family:gadget;left:50px;">for ideas,<br>
+                                                                   for suggestions</p>
+<p class="rotating-item" style="color:#FF3300;font-family:tahoma;">and<br> 
+                                                                   for the shear<br> 
+                                                                   beauty of it</p>
+<p class="rotating-item" style="color:#FF0009;font-family:verdana;left:50px;">studying<br> 
+                                                                    thier<br> 
+                                                                    source code</p>
+<p class="rotating-item" style="color:#9900ff;font-family:'Book Antiqua';left:100px;">and<br> 
+                                                                           what<br> 
+                                                                           makes<br> 
+                                                                           them<br> 
+                                                                           tick</p>  
+<p class="rotating-item" style="color:#FF9999;font-family:'Lucida Console';left:150px;">THE<br> 
+                                                                           AIM</p>
+<p class="rotating-item" style="color:#FFFF00;font-family:monospace;left:100px">is<br> 
+                                                                      to<br> 
+                                                                      create<br> 
+                                                                      a<br> 
+                                                                      website</p>
+<p class="rotating-item" style="color:#00FF00;font-family:helvetica;">abreast<br> 
+                                                                    with the<br> 
+                                                                    modern<br>technology:</p> 
+<p class="rotating-item" style="color:#FF3300;font-family:impact;left:50px;">to compete with<br> 
+                                                                   the<br><i>dazzling</i><br> array</p>
+<p class="rotating-item" style="color:#FF0009;font-family:cursive;left:100px;">of spitfire<br>downloads</p>
+<p class="rotating-item" style="color:#9900ff;font-family:serif;left:100px;">phaser-like<br> 
+                                                                  control</p>
+<p class="rotating-item" style="color:#FFFFFF;font-family:monaco;left:100px;">and bionic<br>interactivity</p>
+</div>
+</div>
+<div id="links">
+<p><a href="index.html"><img src="saucerpink.gif" width="50px" height="50px">MAIN</a></p>
+<p><a href="http://scifiwebdesign.altervista.org/Contact.html"><img src="saucerevergreen.gif" width="50px" height="50px">CONTACT</a></p>
+</div>
+<div id="neon2" style="width: 600px; height: 300px;">
+<div id="rotating-item-wrapper2">
+<img src="anim1.png" class="rotating-item2"> <img src="anim2.png" class="rotating-item2"> <img src="anim3.png" class="rotating-item2"> <img src="anim4.png" class="rotating-item2">
+<img src="anim5.png" class="rotating-item2"> <img src="anim6.png" class="rotating-item2"> <img src="anim7.png" class="rotating-item2"> <img src="anim8.png" class="rotating-item2">
+<img src="anim9.png" class="rotating-item2"> <img src="anim10.png" class="rotating-item2"> <img src="anim11.png" class="rotating-item2"> <img src="anim12.png" class="rotating-item2">
+<img src="anim13.png" class="rotating-item2"> <img src="anim14.png" class="rotating-item2"> <img src="anim15.png" class="rotating-item2"> <img src="anim16.png" class="rotating-item2">
+<img src="anim17.png" class="rotating-item2"> <img src="anim18.png" class="rotating-item2"> <img src="anim19.png" class="rotating-item2"> <img src="anim20.png" class="rotating-item2"> 
+<img src="anim21.png" class="rotating-item2"> <img src="anim22.png" class="rotating-item2"> <img src="anim23.png" class="rotating-item2"> <img src="anim24.png" class="rotating-item2">
+<img src="anim25.png" class="rotating-item2"> <img src="anim26.png" class="rotating-item2"> <img src="anim27.png" class="rotating-item2"> <img src="anim28.png" class="rotating-item2">
+<img src="anim29.png" class="rotating-item2"> <img src="anim30.png" class="rotating-item2"> <img src="anim31.png" class="rotating-item2"> <img src="anim32.png" class="rotating-item2">
+<img src="anim33.png" class="rotating-item2"> <img src="anim34.png" class="rotating-item2"> <img src="anim35.png" class="rotating-item2"> <img src="anim36.png" class="rotating-item2">
+</div>
+</div>
+</body>
+</html>

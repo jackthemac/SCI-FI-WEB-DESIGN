@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+</script>
+
+<script>
+
+$(document).ready(function() {
+
+$(window).load(function() { 
+//start after HTML, images have loaded
+ 
+    
+var InfiniteRotator =
+    {
+        
+init: function()
+        {
+            
+//initial fade-in time (in milliseconds)
+            
+var initialFadeIn = 1000;
+ 
+            
+//interval between items (in milliseconds)
+            
+var itemInterval = 5000;
+ 
+            
+//cross-fade time (in milliseconds)
+            
+var fadeTime = 2500;
+ 
+            
+//count number of items
+            
+var numberOfItems = $('.rotating-item').length;
+ 
+            
+//set current item
+            
+var currentItem = 0;
+ 
+            
+//show first item
+            
+$('.rotating-item').eq(currentItem).fadeIn(initialFadeIn);
+ 
+            
+//loop through the items
+            
+var infiniteLoop = setInterval(function() {
+                
+$('.rotating-item').eq(currentItem).fadeOut(fadeTime);
+ 
+                
+if(currentItem == numberOfItems -1) {
+                    
+currentItem = 0;
+                
+}
+else {
+                    
+currentItem++;
+                
+}
+                
+$('.rotating-item').eq(currentItem).fadeIn(fadeTime);
+ 
+            
+}, 
+itemInterval);
+        
+}
+    
+};
+ 
+    
+InfiniteRotator.init();
+ 
+
+});
+
+});
+
+</script>
+
+<style>
+#rotating-item-wrapper {
+    
+position: relative;
+    
+width: 600px;
+    
+height: 300px;
+ 
+}
+
+.rotating-item  {
+    
+display: none;
+    
+position: absolute;
+    
+top: 0;
+    
+left: 0; 
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="rotating-item-wrapper">
+
+<img src="anim1.png" class="rotating-item"> 
+<img src="anim2.png" class="rotating-item"> 
+<img src="anim3.png" class="rotating-item">
+ <img src="anim4.png" class="rotating-item">
+
+<img src="anim5.png" class="rotating-item"> <img src="anim6.png" class="rotating-item"> <img src="anim7.png" class="rotating-item"> 
+<img src="anim8.png" class="rotating-item">
+<img src="anim9.png" class="rotating-item"> <img src="anim10.png" class="rotating-item">
+ <img src="anim11.png" class="rotating-item"> <img src="anim12.png" class="rotating-item">
+<img src="anim13.png" class="rotating-item">
+ <img src="anim14.png" class="rotating-item"> <img src="anim15.png" class="rotating-item"> <img src="anim16.png" class="rotating-item">
+
+<img src="anim17.png" class="rotating-item"> <img src="anim18.png" class="rotating-item"> <img src="anim19.png" class="rotating-item"> 
+<img src="anim20.png" class="rotating-item"> 
+<img src="anim21.png" class="rotating-item"> <img src="anim22.png" class="rotating-item"> 
+<img src="anim23.png" class="rotating-item"> <img src="anim24.png" class="rotating-item">
+<img src="anim25.png" class="rotating-item"> 
+<img src="anim26.png" class="rotating-item"> <img src="anim27.png" class="rotating-item"> <img src="anim28.png" class="rotating-item">
+<img src="anim29.png" class="rotating-item"> <img src="anim30.png" class="rotating-item"> <img src="anim31.png" class="rotating-item"> 
+<img src="anim32.png" class="rotating-item">
+<img src="anim33.png" class="rotating-item"> <img src="anim34.png" class="rotating-item"> 
+<img src="anim35.png" class="rotating-item"> <img src="anim36.png" class="rotating-item">
+
+
+
+</div>
+
+</body>
+
+</html>
